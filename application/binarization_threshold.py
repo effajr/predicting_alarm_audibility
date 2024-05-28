@@ -114,7 +114,7 @@ def display_performance(m_df, h_df):
     plt.ylim([0, 100])
     plt.legend(loc='lower left')
     plt.xlabel('Evaluation label binarization threshold')
-    plt.ylabel('Precision')
+    plt.ylabel('Recall')
     plt.savefig('../figures/binarization_threshold_recall.pdf')
 
     plt.show()
