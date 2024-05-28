@@ -22,7 +22,7 @@ keywords = {Psychoacoustics, Alarms, Audibility, Occupational noise, Convolution
 ```
 
 ## Dataset
-A dataset that was collected for the purposes of the study. It is publicly accessible on Zenodo and has to be downloaded to run the programs contained in the present repository.
+A dataset has been collected for the purposes of the study. It is publicly accessible on Zenodo and has to be downloaded to run the programs contained in the present repository.
 &nbsp;
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11353196.svg)](https://doi.org/10.5281/zenodo.11353196)
