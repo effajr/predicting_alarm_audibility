@@ -56,8 +56,9 @@ AUROC: 85.84 ± 0.75
 `binarization threshold.py` computes model and human baseline performance in terms of precision, recall and F1-score for evaluation label binarization thresholds varying
 between 0.5 and 1, similar to what was done in the paper. 
 
-<img src="./figures/binarization_threshold_precision.png" alt="Precision" width="300"/> <img src="./figures/binarization_threshold_recall.png" alt="Recall" width="300"/> <img src="./figures/binarization_threshold_f1.png" alt="F1-score" width="300"/>
-
+<p align="center">
+	<img src="./figures/binarization_threshold_precision.png" alt="Precision" width="295"/><img src="./figures/binarization_threshold_recall.png" alt="Recall" width="295"/><img 				src="./figures/binarization_threshold_f1.png" alt="F1-score" width="295"/>
+</p>
 
 ### Model training
 `main_train.py` provides an example of code that could be run to train models similarly to what was done in the paper.
