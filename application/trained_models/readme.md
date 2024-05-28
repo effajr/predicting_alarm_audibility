@@ -1,4 +1,6 @@
 # trained_models/
+This folder contains the PyTorch model weights for the 10 runs of model training mentionned in the paper.
+
 The content of this folder can be downloaded via this [link](https://zenodo.org/records/11353196/files/trained_models.zip?download=1) and should be unzipped here.
 
 ## Structure
