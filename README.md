@@ -31,7 +31,7 @@ A dataset has been collected for the purposes of the study. It is publicly acces
 1) Place the `application/` and `scheme/` folders under a folder called `predicting_alarm_audibility/`.
 2) Download the [dataset](https://doi.org/10.5281/zenodo.8417086).
 3) Unzip `data`, `features`, and `trained_models` under their corresponding folders located in the `application/` folder.
-4) Enter the application folder : `cd predicting_alarm_audibility/application`.
+4) Enter the `application/` folder : `cd predicting_alarm_audibility/application`.
 
 ### Human baseline performance
 ```python
