@@ -1,6 +1,7 @@
 """
 Computes F1-score, Precision and Recall for the trained models for evaluation label binarization thresholds varying
 between 0.5 and 1. (See Sec.5.1, Fig.6 in the paper).
+The figures are saved in the `../figures/` folder
 
 """
 
@@ -85,23 +86,36 @@ def main(config):
 def display_performance(m_df, h_df):
 
     plt.figure('F1 score')
-    sns.lineplot(data=m_df, x='threshold', y='f1', color='k', errorbar='se')
-    sns.lineplot(data=h_df, x='threshold', y='f1', linestyle='--', color='k', errorbar='se')
+    sns.lineplot(data=m_df, x='threshold', y='f1', color='k', errorbar='se', label='Model')
+    sns.lineplot(data=h_df, x='threshold', y='f1', linestyle='--', color='k', errorbar='se', label='Human Baseline')
     plt.xlim([0.5, 1])
     plt.ylim([0, 100])
+    plt.legend(loc='lower left')
+    plt.xlabel('Evaluation label binarization threshold')
+    plt.ylabel('F1-score')
+    plt.savefig('../figures/binarization_threshold_f1.pdf')
 
     plt.figure('Precision')
-    sns.lineplot(data=m_df, x='threshold', y='precision', color='cornflowerblue', errorbar='se')
+    sns.lineplot(data=m_df, x='threshold', y='precision', color='cornflowerblue', errorbar='se', label='Model')
     sns.lineplot(data=h_df, x='threshold', y='precision',
-                 linestyle='--', color='cornflowerblue', errorbar='se')
+                 linestyle='--', color='cornflowerblue', errorbar='se', label='Human Baseline')
     plt.xlim([0.5, 1])
     plt.ylim([0, 100])
+    plt.legend(loc='lower left')
+    plt.xlabel('Evaluation label binarization threshold')
+    plt.ylabel('Precision')
+    plt.savefig('../figures/binarization_threshold_precision.pdf')
 
-    plt.figure('Rappel')
-    sns.lineplot(data=m_df, x='threshold', y='recall', color='indianred', errorbar='se')
-    sns.lineplot(data=h_df, x='threshold', y='recall', linestyle='--', color='indianred', errorbar='se')
+    plt.figure('Recall')
+    sns.lineplot(data=m_df, x='threshold', y='recall', color='indianred', errorbar='se', label='Model')
+    sns.lineplot(data=h_df, x='threshold', y='recall', linestyle='--', color='indianred', errorbar='se',
+                 label='Human Baseline')
     plt.xlim([0.5, 1])
     plt.ylim([0, 100])
+    plt.legend(loc='lower left')
+    plt.xlabel('Evaluation label binarization threshold')
+    plt.ylabel('Precision')
+    plt.savefig('../figures/binarization_threshold_recall.pdf')
 
     plt.show()
 
