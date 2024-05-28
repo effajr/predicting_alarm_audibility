@@ -1,7 +1,7 @@
 # Predicting Alarm Audibility Using Deep Learning
 
 This code is part of an academic publication, and complements the research paper:
-> F. Effa, J.-P. Arz, R. Serizel et N. Grimault. Evaluating and predicting the audibility of acoustic alarms in the workplace using experimental methods and deep learning, *Applied Acoustics*, Volume 219, 2024.
+> F. Effa, J.-P. Arz, R. Serizel and N. Grimault. Evaluating and predicting the audibility of acoustic alarms in the workplace using experimental methods and deep learning, *Applied Acoustics*, Volume 219, 2024.
 
 ## Citation
 In case you use the code or dataset, please consider citing our paper as:
