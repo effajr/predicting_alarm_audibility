@@ -1,5 +1,6 @@
 """
-Computes the average
+Computes the average human baseline psychometric curve and model continuous output values over all the evaluation clips.
+(see Fig. 7 in the paper).
 
 """
 
