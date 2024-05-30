@@ -18,9 +18,8 @@ def main(config):
     run_name = config['run_name']
     save_fd = 'trained_models/main_train'
     model_file_path = os.path.join('.', save_fd, run_name+'.tar')
-    if not os.path.exists(f'./{save_fd}'):
-        os.makedirs(f'./{save_fd}')
-
+    if not os.path.exists(os.path.join('.', save_fd)):
+        os.makedirs(os.path.join('.', save_fd))
     # Make config
     model, dev_dl, eval_dl, optimizer = make(config)
 
