@@ -54,7 +54,7 @@ AUROC: 85.84 ± 0.75
 ```
 
 ### Audibility criterion: effect on performance of the evaluation label binarization threshold
-`python binarization threshold.py` computes model and human baseline performance in terms of precision, recall and F1-score for evaluation label binarization thresholds varying
+`python binarization_threshold.py` computes model and human baseline performance in terms of precision, recall and F1-score for evaluation label binarization thresholds varying
 between 0.5 and 1, similar to what was done in the paper. 
 
 <p align="center">
