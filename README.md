@@ -33,6 +33,7 @@ A dataset has been collected for the purposes of the study. It is publicly acces
 3) Enter the [application/](./application) folder : `cd application`.
 
 ### Human baseline performance
+`python compute_human_performance.py`
 ```python
 compute_human_performance.py
 ---------------------------------------------------------
@@ -44,6 +45,7 @@ Evaluation data - Average Psychometric Function
 	     AUROC: 97.01 ± 0.49,     	 F1: 83.48 ± 2.93
 ```
 ### Model performance over 10 runs
+`python compute_trained_models_performance.py`
 ```python
 compute_trained_models_performance.py
 -------------------
@@ -60,4 +62,4 @@ between 0.5 and 1, similar to what was done in the paper.
 </p>
 
 ### Model training
-`main_train.py` provides an example of code that could be run to train models similarly to what was done in the paper.
+` python main_train.py` provides an example of code that could be run to train models similarly to what was done in the paper.
