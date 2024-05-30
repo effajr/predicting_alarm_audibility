@@ -1,14 +1,17 @@
+# -*- coding: utf-8 -*-
 """
 Extracts the mel-spectrograms and creates the datasets in .h5 format for both Development and Evaluation data.
 
 """
 
 import os
+import sys
+sys.path.append('..')
 import numpy as np
 import pandas as pd
 import librosa
 from scipy.signal import spectrogram
-from predicting_alarm_audibility.scheme.utilities.utils import read_audio, make_audio_clip
+from scheme.utils import read_audio, make_audio_clip
 import h5py
 
 
@@ -51,7 +54,7 @@ def extract_features(conditions_csv_path, data_type, parameters,
     seq_len = parameters['seq_len']
     extractor = MelSpectrogramExtractor(fs=fs, window=window, overlap=overlap, frequency_bins=freq_bins)
 
-    hdf5_path = f"../features/{data_type}/{parameters['output_filename']}.h5"
+    hdf5_path = f"./features/{data_type}/{parameters['output_filename']}.h5"
     fd = os.path.dirname(hdf5_path)
     if not os.path.exists(fd):
         os.makedirs(fd)
@@ -79,7 +82,7 @@ def extract_features(conditions_csv_path, data_type, parameters,
         level_corrections.append(conditions['level_correction_dB'])
         alarm_onsets.append(conditions['alarm_onset'][idx])
 
-        audio_dir = f'../data/audio/{data_type}/'
+        audio_dir = f'./data/audio/{data_type}/'
         alarm_name, background_name = conditions['alarm_id'][idx]+'.wav', conditions['background_id'][idx]+'.wav'
         alarm_onset, noise_level = conditions['alarm_onset'][idx], conditions['noise_level'][idx]
         snr, level_correction = conditions['snr'][idx], conditions['level_correction_dB'][idx]
@@ -128,12 +131,12 @@ if __name__ == '__main__':
               'seq_len': 472,
               'output_filename': 'mel-spectrogram'}
 
-    conditions_path = '../data/annotations/dev/dev_conditions.csv'
-    labels_path = '../data/annotations/dev/dev_labels.csv'
+    conditions_path = './data/annotations/dev/dev_conditions.csv'
+    labels_path = './data/annotations/dev/dev_labels.csv'
     extract_features(conditions_path, data_type='dev', parameters=config, dev_labels_csv_path=labels_path)
 
-    conditions_path = '../data/annotations/eval/eval_conditions.csv'
-    labels_mv_path = '../data/annotations/eval/eval_labels_mv.csv'
-    labels_apf_path = '../data/annotations/eval/eval_labels_apf.csv'
+    conditions_path = './data/annotations/eval/eval_conditions.csv'
+    labels_mv_path = './data/annotations/eval/eval_labels_mv.csv'
+    labels_apf_path = './data/annotations/eval/eval_labels_apf.csv'
     extract_features(conditions_path, data_type='eval', parameters=config,
                      eval_labels_mv_csv_path=labels_mv_path, eval_labels_apf_csv_path=labels_apf_path)
