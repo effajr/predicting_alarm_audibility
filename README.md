@@ -29,7 +29,7 @@ A dataset has been collected for the purposes of the study. It is publicly acces
 
 ## How to run the code
 1) Download the [dataset](https://doi.org/10.5281/zenodo.8417086).
-2) Unzip `data.zip`, `features.zip`, and `trained_models.zip` under their corresponding sub-folders within the [application/](./application) folder.
+2) Unzip [data.zip](https://zenodo.org/records/11353196/files/data.zip?download=1), [features.zip](https://zenodo.org/records/11353196/files/features.zip?download=1), and [trained_models.zip](https://zenodo.org/records/11353196/files/trained_models.zip?download=1) under their corresponding sub-folders within the [application/](./application) folder.
 3) Enter the [application/](./application) folder : `cd application`.
 
 ### Human baseline performance
