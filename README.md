@@ -69,4 +69,4 @@ between 0.5 and 1, similar to what was done in the paper.
 </p>
 
 ### Model training
-` python main_train.py` provides an example of code that could be run to train models similarly to what was done in the paper.
+`python main_train.py` provides an example of code that could be run to train models similarly to what was done in the paper.
