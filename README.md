@@ -28,10 +28,9 @@ A dataset has been collected for the purposes of the study. It is publicly acces
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11353196.svg)](https://doi.org/10.5281/zenodo.11353196)
 
 ## How to run the code
-1) Place the [application/](./application) and [scheme/](./scheme) folders under a folder called `predicting_alarm_audibility/`.
-2) Download the [dataset](https://doi.org/10.5281/zenodo.8417086).
-3) Unzip `data.zip`, `features.zip`, and `trained_models.zip` under their corresponding sub-folders within the [application/](./application) folder.
-4) Enter the [application/](./application) folder : `cd predicting_alarm_audibility/application`.
+1) Download the [dataset](https://doi.org/10.5281/zenodo.8417086).
+2) Unzip `data.zip`, `features.zip`, and `trained_models.zip` under their corresponding sub-folders within the [application/](./application) folder.
+3) Enter the [application/](./application) folder : `cd application`.
 
 ### Human baseline performance
 ```python
