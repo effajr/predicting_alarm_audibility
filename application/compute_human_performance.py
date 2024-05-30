@@ -1,12 +1,15 @@
+# -*- coding: utf-8 -*-
 """
 Computes the human baseline performance on the whole dataset as reported in the paper (see Tables 4 and 5).
 The human baseline performance is computed on Development data (using MV labels) and on Evaluation data (using MV and
 APF labels).
 
 """
-
-from predicting_alarm_audibility.scheme.human_baseline import human_performance
-from predicting_alarm_audibility.scheme.utilities.utils import get_mean_stderr
+import os
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.realpath(__file__)))[0])
+from scheme.human_baseline import human_performance
+from scheme.utils import get_mean_stderr
 
 
 if __name__ == "__main__":

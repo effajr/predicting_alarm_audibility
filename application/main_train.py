@@ -4,8 +4,11 @@ Example of a script that can be used to train models, similar to what was done i
 """
 
 import os
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.realpath(__file__)))[0])
+import torch
 from torch import optim
-from predicting_alarm_audibility.scheme import *
+from scheme import *
 from tqdm import trange
 
 
@@ -14,7 +17,7 @@ def main(config):
     # Saving parameters
     run_name = config['run_name']
     save_fd = 'trained_models/main_train'
-    model_file_path = f'./{save_fd}/{run_name}.tar'
+    model_file_path = os.path.join('.', save_fd, run_name+'.tar')
     if not os.path.exists(f'./{save_fd}'):
         os.makedirs(f'./{save_fd}')
 
@@ -105,7 +108,7 @@ def train_log(model, loader, annotator_indices, optimizer, epoch, progress_metri
 if __name__ == '__main__':
 
     # Number of runs in the experiment
-    nb_runs = 10
+    nb_runs = 1
 
     # Run the experiment
     for k in range(nb_runs):

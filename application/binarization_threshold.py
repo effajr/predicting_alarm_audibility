@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Computes F1-score, Precision and Recall for the trained models for evaluation label binarization thresholds varying
 between 0.5 and 1. (See Sec.5.1, Fig.6 in the paper).
@@ -5,10 +6,15 @@ The figures are saved in the `../figures/` folder
 
 """
 
+import os
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.realpath(__file__)))[0])
+import numpy as np
 import pandas as pd
+from sklearn import metrics
 import matplotlib.pyplot as plt
 import seaborn as sns
-from predicting_alarm_audibility.scheme import *
+from scheme import *
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -93,7 +99,7 @@ def display_performance(m_df, h_df):
     plt.legend(loc='lower left')
     plt.xlabel('Evaluation label binarization threshold')
     plt.ylabel('F1-score')
-    plt.savefig('../figures/binarization_threshold_f1.pdf')
+    plt.savefig('../figures/binarization_threshold_f1.png', dpi=600)
 
     plt.figure('Precision')
     sns.lineplot(data=m_df, x='threshold', y='precision', color='cornflowerblue', errorbar='se', label='Model')
@@ -104,7 +110,7 @@ def display_performance(m_df, h_df):
     plt.legend(loc='lower left')
     plt.xlabel('Evaluation label binarization threshold')
     plt.ylabel('Precision')
-    plt.savefig('../figures/binarization_threshold_precision.pdf')
+    plt.savefig('../figures/binarization_threshold_precision.png', dpi=600)
 
     plt.figure('Recall')
     sns.lineplot(data=m_df, x='threshold', y='recall', color='indianred', errorbar='se', label='Model')
@@ -115,7 +121,7 @@ def display_performance(m_df, h_df):
     plt.legend(loc='lower left')
     plt.xlabel('Evaluation label binarization threshold')
     plt.ylabel('Recall')
-    plt.savefig('../figures/binarization_threshold_recall.pdf')
+    plt.savefig('../figures/binarization_threshold_recall.png', dpi=600)
 
     plt.show()
 

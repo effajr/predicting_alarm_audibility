@@ -1,13 +1,18 @@
+# -*- coding: utf-8 -*-
 """
 Computes the average human baseline psychometric curve and model continuous output values over all the evaluation clips.
 (see Fig. 7 in the paper).
 
 """
 
+import os
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.realpath(__file__)))[0])
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from predicting_alarm_audibility.scheme import *
+from scheme import *
 
 
 def main(config):

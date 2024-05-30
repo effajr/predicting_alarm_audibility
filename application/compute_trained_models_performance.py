@@ -1,10 +1,13 @@
+# -*- coding: utf-8 -*-
 """
 Evaluates the trained models on Evaluation data using APF labels. As presented in the paper (see Table 6), ROC AUC and
 F1-score are computed and reported with their mean values and standard error across 10 runs.
 """
 
-from predicting_alarm_audibility.scheme import *
-from predicting_alarm_audibility.scheme.utilities.utils import get_mean_stderr
+import os
+import sys
+sys.path.append(os.path.split(os.path.dirname(os.path.realpath(__file__)))[0])
+from scheme import *
 
 
 def main():
