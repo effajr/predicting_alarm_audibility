@@ -54,11 +54,18 @@ AUROC: 85.84 ± 0.75
 ```
 
 ### Audibility criterion: effect on performance of the evaluation label binarization threshold
-`binarization threshold.py` computes model and human baseline performance in terms of precision, recall and F1-score for evaluation label binarization thresholds varying
+`python binarization threshold.py` computes model and human baseline performance in terms of precision, recall and F1-score for evaluation label binarization thresholds varying
 between 0.5 and 1, similar to what was done in the paper. 
 
 <p align="center">
 	<img src="./figures/binarization_threshold_precision.png" alt="Precision" width="295"/><img src="./figures/binarization_threshold_recall.png" alt="Recall" width="295"/><img 				src="./figures/binarization_threshold_f1.png" alt="F1-score" width="295"/>
+</p>
+
+### Continuous model output and human psychometric function
+`python continuous_output.py` Computes the average human baseline psychometric curve and model continuous output values over all the evaluation clips.
+
+<p align="center">
+<img src="./figures/continuous_output.png" alt="Precision" width="350"/>
 </p>
 
 ### Model training
