@@ -42,7 +42,7 @@ def main():
         auc_list.append(run_auc), f1_list.append(run_f1)
 
     auc_, f1_ = get_mean_stderr(auc_list), get_mean_stderr(f1_list)
-    print(f'\tAUROC: {auc_[0]:.2f} ± {auc_[1]:.2f}\n\t   F1: {f1_[0]:.2f} ± {f1_[1]:.2f}')
+    print(f'\tAUROC: {auc_[0]:.2f} +/- {auc_[1]:.2f}\n\t   F1: {f1_[0]:.2f} +/- {f1_[1]:.2f}')
 
     return auc_list, f1_list
 
