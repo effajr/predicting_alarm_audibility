@@ -29,8 +29,8 @@ if __name__ == "__main__":
                             bin_threshold=0.5)
     auc, f1 = get_mean_stderr(auc_), get_mean_stderr(f1_)
     print('Development data - Majority Voting')
-    print(f"\t     AUROC: {auc[0]:.2f} ± {auc[1]:.2f}, "
-          f"    \t F1: {f1[0]:.2f} ± {f1[1]:.2f}\n")
+    print(f"\t     AUROC: {auc[0]:.2f} +/- {auc[1]:.2f}, "
+          f"    \t F1: {f1[0]:.2f} +/- {f1[1]:.2f}\n")
 
     # Human baseline performance: Evaluation data - Majority Voting
     auc_ = human_performance(csv_path='./data/annotations/eval/eval_labels_mv.csv',
@@ -47,8 +47,8 @@ if __name__ == "__main__":
                             bin_threshold=0.5)
     auc, f1 = get_mean_stderr(auc_), get_mean_stderr(f1_)
     print('Evaluation data - Majority Voting')
-    print(f"\t     AUROC: {auc[0]:.2f} ± {auc[1]:.2f}, "
-          f"    \t F1: {f1[0]:.2f} ± {f1[1]:.2f}\n")
+    print(f"\t     AUROC: {auc[0]:.2f} +/- {auc[1]:.2f}, "
+          f"    \t F1: {f1[0]:.2f} +/- {f1[1]:.2f}\n")
 
     # Human baseline performance: Evaluation data - Average Psychometric Function
     auc_ = human_performance(csv_path='./data/annotations/eval/eval_labels_apf.csv',
@@ -65,5 +65,5 @@ if __name__ == "__main__":
                             bin_threshold=0.5)
     auc, f1 = get_mean_stderr(auc_), get_mean_stderr(f1_)
     print('Evaluation data - Average Psychometric Function')
-    print(f"\t     AUROC: {auc[0]:.2f} ± {auc[1]:.2f}, "
-          f"    \t F1: {f1[0]:.2f} ± {f1[1]:.2f}\n")
+    print(f"\t     AUROC: {auc[0]:.2f} +/- {auc[1]:.2f}, "
+          f"    \t F1: {f1[0]:.2f} +/- {f1[1]:.2f}\n")
